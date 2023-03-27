@@ -42,7 +42,8 @@ Through an STA enters the server's AP.
 
 * **URL:** Enter the IP of the http server with the URI **/ws** and press **Open**.
 
-![extension](/doc/img/ip_gateway.PNG) 
+![extension](/doc/img/ip_gateway.PNG)
+<br>
 ![extension](/doc/img/ws_uri.PNG)
 
 
