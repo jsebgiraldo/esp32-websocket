@@ -32,23 +32,23 @@ See the Getting Started Guide for full steps to configure and use ESP-IDF to bui
 
 For this example we used the "WebSocket Test Client" extension available at https://chrome.google.com/webstore/detail/websocket-test-client/fgponpodhbmadfljofbimhhlengambbn?hl=en
 
-![extension](\doc\img\websocket_ext.PNG)
+![extension](doc\img\websocket_ext.PNG)
 
 ### How use
 
 Through an STA enters the server's AP.
 
-![ssid](\doc\img\ssid.PNG)
+![ssid](doc\img\ssid.PNG)
 
 * **URL:** Enter the IP of the http server with the URI **/ws** and press **Open**.
 
-![extension](\doc\img\ip_gateway.PNG) ![extension](\doc\img\ws_uri.PNG)
+![extension](doc\img\ip_gateway.PNG) ![extension](doc\img\ws_uri.PNG)
 
 
 * **REQUEST:** Enter a message to the server.
 * **MESSAGE LOG:** Here you will receive the server's response.
 
-![extension](\doc\img\websocket_client.PNG)
+![extension](doc\img\websocket_client.PNG)
 
 
 
