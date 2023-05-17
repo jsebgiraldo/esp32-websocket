@@ -38,14 +38,35 @@ For this example we used the "WebSocket Test Client" extension available at http
 
 Through an STA enters the server's AP.
 
-![ssid](/doc/img/ssid.PNG)
+```c
+// WiFi application settings
+#define WIFI_AP_SSID				"WEBSOCKET"			// AP name
+#define WIFI_AP_PASSWORD			"123456789"			// AP password
+
+```
 
 * **URL:** Enter the IP of the http server with the URI **/ws** and press **Open**.
 
-![extension](/doc/img/ip_gateway.PNG)
+```c
+#define WIFI_AP_IP					"192.168.5.1"		// AP default IP
+#define WIFI_AP_GATEWAY				"192.168.5.1"		// AP default Gateway (should be the same as the IP)
+#define WIFI_AP_NETMASK				"255.255.255.0"		// AP netmask
+```
 <br>
-![extension](/doc/img/ws_uri.PNG)
 
+* **END POINT :**
+
+```c
+httpd_uri_t ws = {
+    .uri        = "/ws",
+    .method     = HTTP_GET,
+    .handler    = ws_handler,
+    .user_ctx   = NULL,
+    .is_websocket = true,
+    .handle_ws_control_frames = true
+};
+httpd_register_uri_handler(http_server_handle, &ws);
+```
 
 * **REQUEST:** Enter a message to the server.
 * **MESSAGE LOG:** Here you will receive the server's response.
